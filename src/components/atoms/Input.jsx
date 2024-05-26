@@ -1,3 +1,5 @@
+
+
 import styled from 'styled-components';
 
 const StyledInput = styled.input`
@@ -14,16 +16,20 @@ const StyledInput = styled.input`
   }
 `;
 
-const Input = ({ type, name, value, onChange, placeholder }) => {
+function Input({ type, name, value, onChange, placeholder }) {
+  const handleChange = (event) => {
+    onChange(event.target.value);
+  };
+
   return (
     <StyledInput
       type={type}
       name={name}
       value={value}
-      onChange={onChange}
+      onChange={handleChange}
       placeholder={placeholder}
     />
   );
-};
+}
 
 export default Input;

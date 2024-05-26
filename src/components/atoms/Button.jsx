@@ -1,3 +1,5 @@
+
+
 import styled from 'styled-components';
 
 const StyledButton = styled.button`
@@ -14,8 +16,8 @@ const StyledButton = styled.button`
   }
 `;
 
-const Button = ({ text, onClick, type = "button" }) => {
+function Button({ text, onClick, type = "button" }) {
   return <StyledButton onClick={onClick} type={type}>{text}</StyledButton>;
-};
+}
 
 export default Button;

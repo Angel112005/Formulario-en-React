@@ -1,3 +1,4 @@
+
 import styled from 'styled-components';
 
 const Row = styled.div`
@@ -10,13 +11,13 @@ const Label = styled.label`
   margin-bottom: 5px;
 `;
 
-const FormRow = ({ label, input }) => {
+function FormRow({ label, input }) {
   return (
     <Row>
       <Label>{label}</Label>
       {input}
     </Row>
   );
-};
+}
 
 export default FormRow;
